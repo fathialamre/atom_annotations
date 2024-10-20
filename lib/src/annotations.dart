@@ -1,8 +1,9 @@
 class PageRouter {
   final String path;
   final bool initialRoute;
+  final List<Type>? middlewares;
 
-  const PageRouter(this.path, {this.initialRoute = false});
+  const PageRouter(this.path, {this.initialRoute = false, this.middlewares});
 }
 
 class RouteParam {
@@ -65,4 +66,8 @@ class Action {
 
 class Service {
   const Service();
+}
+
+class MainLayout {
+  const MainLayout();
 }
